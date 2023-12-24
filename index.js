@@ -6,14 +6,14 @@ const port = process.env.PORT || 5000;
 const categories = require('./data/categories.json');
 const news = require('./data/news.json');
 
-// app.use(cors());
+app.use(cors());
 
-const corsOptions = {
+/* const corsOptions = {
     origin: '*',
     credentials: true, //access-control-allow-credentials:true
     optionSuccessStatus: 200,
 }
-app.use(cors(corsOptions))
+app.use(cors(corsOptions)) */
 
 app.get('/', (req, res) => {
     res.send('The Dragon News is running');
